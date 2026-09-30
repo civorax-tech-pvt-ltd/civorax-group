@@ -37,18 +37,7 @@
     html { scroll-behavior: auto; }
     *, *::before, *::after { transition: none !important; animation: none !important; }
   }
-  /* One-screen-per-scroll mode (src/scripts/fullpage.ts): every section is at least one
-     full screen with its content centred. :where() keeps this weaker than utilities,
-     so a section's own layout (e.g. the hero's bottom-aligned content) still wins. */
-  html.fullpage { scroll-behavior: auto; }
-  html.fullpage :where(main > section) {
-    min-height: 100svh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  html.fullpage :where(main > section) > :where(.container-x) { width: 100%; }
-  html.fullpage :where(body > footer) { min-height: 100svh; display: flex; flex-direction: column; justify-content: space-between; padding-top: 7rem; }
+
 
   body {
     background: var(--color-void);
